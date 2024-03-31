@@ -179,12 +179,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-function addNavItemClassToUlElementInMenu($classes) {
+function addNavItemClassToUlElementInMenu($classes): array
+{
     $classes[] = 'nav-item';
     return $classes;
 }
 
-function addClassNavLinkToAnchorInMenu($html) {
+function addClassNavLinkToAnchorInMenu($html): string
+{
     return preg_replace('/<a /', '<a class="nav-link"', $html);
 }
 
