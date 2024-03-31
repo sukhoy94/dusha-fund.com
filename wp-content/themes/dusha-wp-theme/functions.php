@@ -146,8 +146,11 @@ function dusha_wp_theme_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+    wp_enqueue_style('custom', get_template_directory_uri() . '/assets/dist/main.css');
+    wp_enqueue_script('script', get_template_directory_uri() . '/assets/dist/bundle.js', [], _S_VERSION, ['in_footer' => true]);
 }
-add_action( 'wp_enqueue_scripts', 'dusha_wp_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'dusha_wp_theme_scripts');
 
 /**
  * Implement the Custom Header feature.
