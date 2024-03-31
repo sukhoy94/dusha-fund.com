@@ -179,3 +179,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function addNavItemClassToUlElementInMenu($classes){
+    $classes[] = 'nav-item';
+    return $classes;
+}
+
+function addClassNavLinkToAnchorInMenu($class) {
+    return preg_replace('/<a /', '<a class="nav-link"', $class);
+}
+
+add_filter('wp_nav_menu','addClassNavLinkToAnchorInMenu');
+add_filter( 'nav_menu_css_class', 'addNavItemClassToUlElementInMenu', 10, 4 );
