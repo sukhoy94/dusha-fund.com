@@ -182,6 +182,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function addNavItemClassToUlElementInMenu($classes): array
 {
     $classes[] = 'nav-item';
+
+    if (in_array('current_page_item', $classes)) {
+        $classes[] = 'active';
+    }
+
     return $classes;
 }
 
