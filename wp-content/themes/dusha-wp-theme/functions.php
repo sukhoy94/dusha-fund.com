@@ -189,4 +189,4 @@ function addClassNavLinkToAnchorInMenu($class) {
 }
 
 add_filter('wp_nav_menu','addClassNavLinkToAnchorInMenu');
-add_filter( 'nav_menu_css_class', 'addNavItemClassToUlElementInMenu', 10, 4 );
+add_filter('nav_menu_css_class', 'addNavItemClassToUlElementInMenu', 10, 4 );
