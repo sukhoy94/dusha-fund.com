@@ -26,6 +26,10 @@
                 <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
+
+                <a class="btn btn-primary" target="_blank" href="https://dusha-project.com">
+                    Przejdź do projektu Dusha moja - Ukraina
+                </a>
             </div>
         </div>
     </div>
