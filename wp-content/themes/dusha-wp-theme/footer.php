@@ -11,15 +11,7 @@
 
 ?>
 
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                    </a>
-                    <span class="text-muted">© 2024 Dusha Foundation</span>
-                </div>
-
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
                 <?php
                     $socialLinksCollection = [
                         [
@@ -51,7 +43,7 @@
                     ];
                 ?>
 
-                <ul class="nav col-md-6 justify-content-end list-unstyled d-flex">
+                <ul class="nav col-sm-12 justify-content-center list-unstyled d-flex">
                     <?php foreach($socialLinksCollection as $socialLink): ?>
                         <li class="ms-3">
                             <a class="social-link" target="_blank" href="<?=$socialLink['href'];?>">
@@ -60,8 +52,13 @@
                         </li>
                     <?php endforeach;?>
                 </ul>
+
+                <div class="w-100 text-center mt-3 mb-§">
+                    <span class="color-white fw-bold">© 2024 Dusha Foundation</span>
+                </div>
+
+
             </footer>
-        </div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/5ae6764514.js" crossorigin="anonymous"></script>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="bg-black">
 <?php wp_body_open(); ?>
 <div id="page" class="site bg-black">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dusha-wp-theme' ); ?></a>
@@ -32,9 +32,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
             <div class="container-fluid">
 
-<!--                <a class="navbar-brand heading-black page-scroll" href="/">-->
-<!--                    --><?php //require ('template-parts/logo-svg.php'); ?>
-<!--                </a>-->
+
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primary-top-navbar" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
