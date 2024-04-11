@@ -52,7 +52,8 @@
                 </ul>
 
                 <div class="w-100 text-center mt-3 mb-§">
-                    <span class="color-white fw-bold">© 2024 Dusha Foundation</span>
+                    <span class="color-white fw-bold">© 2024 Dusha Foundation. All rights are reserved.
+</span>
                 </div>
 
 
