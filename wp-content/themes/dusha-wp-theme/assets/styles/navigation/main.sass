@@ -12,22 +12,33 @@ li.menu-item-object-yspl_win
         display: inline
 
 header.site-header
+  .navbar-toggler-icon
+    background-color: white
+    border-radius: 7px
   .navbar-nav
+    @media (max-width: 991px)
+      margin-top: 30px
     .menu-item
       position: relative
-      margin: 0 20px
+      @media (max-width: 991px)
+        text-align: center
+
     li.menu-item > a
-      font-size: 1.2rem
+      font-size: 1.1rem
+      @media (max-width: 991px)
+        font-size: 2rem
       font-weight: 600
       color: #fff
       cursor: pointer
       padding: 5px 20px
-      text-decoration: underline
 
       &:hover
         text-decoration: none
 
+      i
+        margin-left: 10px
 
-      
+
+
 
 
