@@ -15,31 +15,29 @@
                 <?php
                     $socialLinksCollection = [
                         [
+                            'css-class' => 'fa-tiktok',
+                            'href' => 'https://www.tiktok.com/@artdushaprojekt',
+                        ],
+                        [
                             'css-class' => 'fa-instagram',
                             'href' => 'https://www.instagram.com/fundacja_dusha/',
-                        ],
-                        [
-                            'css-class' => 'fa-youtube',
-                            'href' => 'https://www.youtube.com/@ArtProject-Dusha',
-                        ],
-                        [
-                            'css-class' => 'fa-pinterest',
-                            'href' => 'https://pl.pinterest.com/ArtProjectDUSHA/'
                         ],
                         [
                             'css-class' => 'fa-facebook',
                             'href' => 'https://m.facebook.com/DuszaArtProjekt',
                         ],
                         [
-                            'css-class' => 'fa-tiktok',
-                            'href' => 'https://www.tiktok.com/@artdushaprojekt',
+                            'css-class' => 'fa-youtube',
+                            'href' => 'https://www.youtube.com/@ArtProject-Dusha',
                         ],
-
                         [
                             'css-class' => 'fa-telegram',
                             'href' => 'https://t.me/dusha_moja_ukraina',
                         ],
-
+                        [
+                            'css-class' => 'fa-pinterest',
+                            'href' => 'https://pl.pinterest.com/ArtProjectDUSHA/'
+                        ],
                     ];
                 ?>
 
