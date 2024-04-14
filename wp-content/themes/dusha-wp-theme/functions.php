@@ -153,3 +153,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require_once "backend/navigation.php";
+
+add_filter( 'template_include', 'portfolio_page_template', 99 );
+function portfolio_page_template( $template ) {
+    if (is_page('our-goals') || is_page('nasze-cele') ) {
+        $new_template = locate_template( array( 'page-our-goals.php' ) );
+        if ( '' != $new_template ) {
+            return $new_template ;
+        }
+    }
+
+    return $template;
+}
