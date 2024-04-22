@@ -50,6 +50,8 @@
                     'theme_location'  => 'top-menu',
                 ) );
                 ?>
+
+                <a class="btn bg-primary color-white donate-btn" href="<?php echo get_permalink(132);?>"> Donate <i class="fa-solid fa-heart"></i> </a>
             </div>
 
 
