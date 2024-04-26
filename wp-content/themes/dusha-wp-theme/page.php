@@ -15,6 +15,7 @@
 get_header();
 global $post;
 ?>
+22
 	<div id="primary" class="container color-white">
         <h1 class="color-primary page-content-title mt-5"><?=$post->post_title?></h1>
         <?=$post->post_content;?>
