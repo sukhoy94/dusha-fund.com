@@ -46,7 +46,7 @@
                     'menu_class'      => 'navbar-nav',
                     'echo'            => true,
                     'fallback_cb'     => 'wp_page_menu',
-                    'link_after'      => '<i class="fa-solid fa-arrow-up-right-from-square"></i>',
+                    'link_after'      => '',
                     'theme_location'  => 'top-menu',
                 ) );
                 ?>
