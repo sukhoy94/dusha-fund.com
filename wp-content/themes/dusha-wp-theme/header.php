@@ -26,42 +26,44 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site bg-black">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dusha-wp-theme' ); ?></a>
+    <div class="container">
 
-	<header id="masthead" class="site-header bg-black">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">
-                    <?php require ('template-parts/logo-svg.php'); ?>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <header id="masthead" class="site-header bg-black">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid nav-container">
+                    <a class="navbar-brand" href="/">
+                        <?php require ('template-parts/logo-svg.php'); ?>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <?php
+                    wp_nav_menu( array(
+                        'menu'            => '',
+                        'container'       => 'div',
+                        'container_class' => 'collapse justify-content-end navbar-collapse',
+                        'container_id'    => 'navbarSupportedContent',
+                        'menu_class'      => 'navbar-nav',
+                        'echo'            => true,
+                        'fallback_cb'     => 'wp_page_menu',
+                        'link_after'      => '',
+                        'theme_location'  => 'top-menu',
+                    ) );
+                    ?>
+
+                    <a class="btn bg-primary color-white donate-btn" href="<?php echo get_permalink(132);?>"> Donate <i class="fa-solid fa-heart"></i> </a>
+                </div>
+
+
+            </nav>
+
+            <ul class="language-switcher-wrapper">
                 <?php
-                wp_nav_menu( array(
-                    'menu'            => '',
-                    'container'       => 'div',
-                    'container_class' => 'collapse justify-content-end navbar-collapse',
-                    'container_id'    => 'navbarSupportedContent',
-                    'menu_class'      => 'navbar-nav',
-                    'echo'            => true,
-                    'fallback_cb'     => 'wp_page_menu',
-                    'link_after'      => '',
-                    'theme_location'  => 'top-menu',
-                ) );
+                    if (function_exists('pll_the_languages')) {
+                        pll_the_languages(['show_flags' => true, 'show_names' => false,]);
+                    }
                 ?>
-
-                <a class="btn bg-primary color-white donate-btn" href="<?php echo get_permalink(132);?>"> Donate <i class="fa-solid fa-heart"></i> </a>
-            </div>
-
-
-        </nav>
-
-        <ul class="language-switcher-wrapper">
-            <?php
-                if (function_exists('pll_the_languages')) {
-                    pll_the_languages(['show_flags' => true, 'show_names' => false,]);
-                }
-            ?>
-        </ul>
-	</header><!-- #masthead -->
+            </ul>
+        </header><!-- #masthead -->
+    </div>
