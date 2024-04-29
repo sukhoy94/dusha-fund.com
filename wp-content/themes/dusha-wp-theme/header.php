@@ -61,7 +61,7 @@
             <ul class="language-switcher-wrapper">
                 <?php
                     if (function_exists('pll_the_languages')) {
-                        pll_the_languages(['show_flags' => true, 'show_names' => false,]);
+                        pll_the_languages(['show_flags' => false, 'show_names' => true,]);
                     }
                 ?>
             </ul>
