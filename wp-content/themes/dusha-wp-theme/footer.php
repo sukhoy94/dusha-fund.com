@@ -37,7 +37,7 @@
     <?php endforeach;?>
 </ul>
 <footer class="py-3 my-4">
-    <ul class="social-links-list w-100 justify-content-center list-unstyled">
+    <ul class="social-links-list w-100 justify-content-center list-unstyled mb-0">
         <?php foreach($socialLinksCollection as $socialLink): ?>
             <li class="ms-3">
                 <a class="social-link" target="_blank" href="<?=$socialLink['href'];?>">
@@ -46,7 +46,7 @@
             </li>
         <?php endforeach;?>
     </ul>
-    <div class="w-100 text-center mt-4">
+    <div class="w-100 text-center">
         <span class="color-white fw-bold copyright">
             © 2024 Dusha Foundation. All rights are reserved.
         </span>
