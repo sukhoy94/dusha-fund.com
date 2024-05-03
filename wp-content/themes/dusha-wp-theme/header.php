@@ -27,7 +27,6 @@
 <div id="page" class="site bg-black">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dusha-wp-theme' ); ?></a>
     <div class="container">
-
         <header id="masthead" class="site-header bg-black">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid nav-container">
@@ -39,6 +38,9 @@
                     </button>
 
                     <?php
+
+                    require_once "backend/header/DushaWalker.php";
+
                     wp_nav_menu( array(
                         'menu'            => '',
                         'container'       => 'div',
@@ -49,6 +51,7 @@
                         'fallback_cb'     => 'wp_page_menu',
                         'link_after'      => '',
                         'theme_location'  => 'top-menu',
+                        'walker' => new DushaWalker(),
                     ) );
                     ?>
 
