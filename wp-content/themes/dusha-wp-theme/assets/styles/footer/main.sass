@@ -3,6 +3,8 @@
   right: 1%
   bottom: 30%
   list-style-type: none
+  @media (max-width: 540px)
+    display: none
 
   li
     margin-bottom: 15px
@@ -48,7 +50,10 @@ footer
   bottom: 2rem
   height: 5rem
   .social-links-list
+    display: none
     position: relative
+    @media (max-width: 540px)
+      display: flex
     li
       display: inline
 .copyright
