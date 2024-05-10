@@ -10,4 +10,4 @@
     <script src="https://kit.fontawesome.com/5ae6764514.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-black">
+<body class="">

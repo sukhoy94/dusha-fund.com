@@ -22,12 +22,12 @@
     <script src="https://kit.fontawesome.com/5ae6764514.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-black">
+<body>
 <?php wp_body_open(); ?>
-<div id="page" class="site bg-black">
+<div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dusha-wp-theme' ); ?></a>
     <div class="container">
-        <header id="masthead" class="site-header bg-black">
+        <header id="masthead" class="site-header">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid nav-container">
                     <a class="navbar-brand" href="/">
