@@ -1,34 +1,38 @@
-<?php /* Template Name: events page */ ?>
-
 <?php
 get_header();
-
-
-$query = new WP_Query([
-    'category_name' => 'events',
+$events = (new WP_Query([
+    'category_name' => 'events-pl',
     'posts_per_page' => 10,
-]);
-
-$events = $query->posts;
+]))->posts;
 ?>
 
 <div class="container">
     <div class="row justify-content-evenly">
         <?php foreach ($events as $event): ?>
+            <?php
+                $postMetadata = get_post_custom($event->ID);
+            ?>
             <div class="col-4 event-wrapper color-white">
                 <div class="event-header">
                     <h3><a href=""><?php echo $event->post_title; ?></a></h3>
-                    <span>pozostało miejsc: 10</span>
+                    <?php if (isset($postMetadata['places_remaining'])):?>
+                    <span>pozostało miejsc: <?php echo $postMetadata['places_remaining'][0];?></span>
+                    <?php endif;?>
                 </div>
+                <?php if (!empty($event->post_excerpt)): ?>
                 <p class="event-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet autem blanditiis, consequuntur dignissimos ex fugit, illo inventore
-                    laboriosam magni necessitatibus nihil obcaecati, officiis optio placeat provident sit voluptas voluptatem!
+                    <?php echo $event->post_excerpt;?>
                 </p>
+                <?php endif;?>
                 <div class="event-date-and-place">
-                    <span class="event-date">When? - 01.04.2024 12:00</span>
-                    <span class="event-place">Where? - Restauracja Bona, Lublin</span>
+                    <?php if (isset($postMetadata['date'])):?>
+                        <span class="event-date">When? - <?php echo $postMetadata['date'][0];?></span>
+                    <?php endif;?>
+                    <?php if (isset($postMetadata['place'])):?>
+                        <span class="event-place">Where? - <?php echo $postMetadata['place'][0];?></span>
+                    <?php endif;?>
                 </div>
-                <a href="" class="btn event-link">
+                <a href="<?php echo get_permalink($event); ?>" class="btn event-link">
                     szczegóły
                 </a>
             </div>

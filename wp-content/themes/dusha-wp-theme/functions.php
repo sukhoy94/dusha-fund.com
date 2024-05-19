@@ -156,6 +156,7 @@ require_once "backend/navigation.php";
 
 add_filter( 'template_include', 'portfolio_page_template', 99 );
 function portfolio_page_template( $template ) {
+    // custom template for goals page
     if (is_page('our-goals') || is_page('nasze-cele') ) {
         $new_template = locate_template( array( 'page-our-goals.php' ) );
         if ( '' != $new_template ) {
@@ -163,10 +164,22 @@ function portfolio_page_template( $template ) {
         }
     }
 
-    if (is_category('events-ua') || is_category('events')) {
+    // custom template for events list page
+    if (is_category('events-ua') || is_category('events-pl')) {
         $new_template = locate_template( array( 'category-events.php' ) );
         if ( '' != $new_template ) {
             return $new_template ;
+        }
+    }
+
+    // custom template for events
+    if (is_singular()) {
+        $postCategories = array_column(get_the_category(), 'slug');
+        if (array_intersect(['events-ua', 'events-pl'], $postCategories)) {
+            $new_template = locate_template(['single-event.php']);
+            if ( '' != $new_template ) {
+                return $new_template ;
+            }
         }
     }
 
