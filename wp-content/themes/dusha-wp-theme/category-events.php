@@ -10,13 +10,17 @@ $events = (new WP_Query([
     <div class="row justify-content-evenly">
         <?php foreach ($events as $event): ?>
             <?php
-                $postMetadata = get_post_custom($event->ID);
+                $eventMetadata = get_post_custom($event->ID);
             ?>
             <div class="col-4 event-wrapper color-white">
                 <div class="event-header">
                     <h3><a href=""><?php echo $event->post_title; ?></a></h3>
-                    <?php if (isset($postMetadata['places_remaining'])):?>
-                    <span>pozostało miejsc: <?php echo $postMetadata['places_remaining'][0];?></span>
+                    <?php if (isset($eventMetadata['places_remaining'])):?>
+                    <span>pozostało miejsc: <?php echo $eventMetadata['places_remaining'][0];?></span>
+                    <?php endif;?>
+
+                    <?php if (isset($eventMetadata['price'])):?>
+                        <p>Cena - <?php echo $eventMetadata['price'][0];?></p>
                     <?php endif;?>
                 </div>
                 <?php if (!empty($event->post_excerpt)): ?>
@@ -25,11 +29,11 @@ $events = (new WP_Query([
                 </p>
                 <?php endif;?>
                 <div class="event-date-and-place">
-                    <?php if (isset($postMetadata['date'])):?>
-                        <span class="event-date">When? - <?php echo $postMetadata['date'][0];?></span>
+                    <?php if (isset($eventMetadata['date'])):?>
+                        <span class="event-date">Kiedy? - <?php echo $eventMetadata['date'][0];?></span>
                     <?php endif;?>
-                    <?php if (isset($postMetadata['place'])):?>
-                        <span class="event-place">Where? - <?php echo $postMetadata['place'][0];?></span>
+                    <?php if (isset($eventMetadata['place'])):?>
+                        <span class="event-place">Gdzie? - <?php echo $eventMetadata['place'][0];?></span>
                     <?php endif;?>
                 </div>
                 <a href="<?php echo get_permalink($event); ?>" class="btn event-link">
