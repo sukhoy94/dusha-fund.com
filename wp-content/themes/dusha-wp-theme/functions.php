@@ -163,5 +163,14 @@ function portfolio_page_template( $template ) {
         }
     }
 
+    if (is_category('events-ua') || is_category('events')) {
+        $new_template = locate_template( array( 'category-events.php' ) );
+        if ( '' != $new_template ) {
+            return $new_template ;
+        }
+    }
+
     return $template;
 }
+
+
