@@ -153,6 +153,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require_once "backend/navigation.php";
+require_once "backend/translations/polylang.php";
 
 add_filter( 'template_include', 'portfolio_page_template', 99 );
 function portfolio_page_template( $template ) {

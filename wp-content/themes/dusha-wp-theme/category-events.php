@@ -21,7 +21,7 @@ $events = (new WP_Query([
                     <?php endif;?>
 
                     <?php if (isset($eventMetadata['price'])):?>
-                        <p>Cena - <?php echo $eventMetadata['price'][0];?></p>
+                        <p><?php echo pll__('Price label');?> - <?php echo $eventMetadata['price'][0];?></p>
                     <?php endif;?>
                 </div>
                 <?php if (!empty($event->post_excerpt)): ?>
@@ -38,7 +38,7 @@ $events = (new WP_Query([
                     <?php endif;?>
                 </div>
                 <a href="<?php echo get_permalink($event); ?>" class="btn event-link">
-                    szczegóły
+                    <?php echo pll__('Read more');?>
                 </a>
             </div>
         <?php endforeach;?>
