@@ -15,7 +15,7 @@ $events = (new WP_Query([
             ?>
             <div class="col-4 event-wrapper color-white">
                 <div class="event-header">
-                    <h3><a href=""><?php echo $event->post_title; ?></a></h3>
+                    <h3><a href="<?php echo get_permalink($event); ?>"><?php echo $event->post_title; ?></a></h3>
                     <?php if (isset($eventMetadata['places_remaining'])):?>
                     <span>pozostało miejsc: <?php echo $eventMetadata['places_remaining'][0];?></span>
                     <?php endif;?>
