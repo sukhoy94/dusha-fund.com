@@ -4,6 +4,7 @@ $events = (new WP_Query([
     'category_name' => 'events-pl',
     'posts_per_page' => 10,
 ]))->posts;
+
 ?>
 
 <div class="container">
