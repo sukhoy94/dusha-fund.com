@@ -20,6 +20,9 @@
 	<?php wp_head(); ?>
 
     <script src="https://kit.fontawesome.com/5ae6764514.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
 </head>
 
 <body>
