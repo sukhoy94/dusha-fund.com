@@ -115,23 +115,14 @@
             <section class="splide participants-slider">
                 <div class="splide__track">
                     <ul class="splide__list">
-                         <!-- inna -->
+                        <?php  foreach ($participants as $participant) :?>
                         <li class="splide__slide">
-                            <img src="https://dusha-project.com/img/participants/new/inna_berezka-min.jpg"
-                                class="card-img-top person-image participant-image" alt="">
+                            <img src="<?php echo esc_url($participant['imageSrc']); ?>" class="card-img-top person-image participant-image" alt="">
                             <div class="card-body">
-                                <h5 class="card-title person-name text-center">Інна Березка</h5>
+                                <h5 class="card-title person-name text-center"><?php echo esc_html($participant['name']); ?></h5>
                             </div>
                         </li>
-
-                        <!-- oksana kostiuk -->
-                        <li class="splide__slide">
-                            <img src="https://dusha-project.com/img/participants/new/Oksana Kostiuk-min.jpeg"
-                                class="card-img-top person-image participant-image" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title person-name text-center">Оксана Костюк</h5>
-                            </div>
-                        </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </section>
