@@ -1,6 +1,6 @@
 <?php /* Template Name: Dusha moja - Ukraina project */ ?>
 <?php get_header(); ?>
-
+<?php require_once("backend/DushaMojaUkraina.php"); ?>
 <!-- hero start -->
 <section class="bg-hero d-flex align-items-center" id="home">
     <div class="container hero-text-container">
@@ -137,146 +137,14 @@
             </section>
         <?php else: ?>
             <div class="row">
-                <!-- inna -->
+            <?php foreach ($participants as $participant) :?>
                 <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/inna_berezka-min.jpg"
-                        class="card-img-top person-image participant-image" alt="">
+                    <img src="<?php echo esc_url($participant['imageSrc']); ?>" class="card-img-top person-image participant-image" alt="">
                     <div class="card-body">
-                        <h5 class="card-title person-name text-center">Інна Березка</h5>
+                        <h5 class="card-title person-name text-center"><?php echo esc_html($participant['name']); ?></h5>
                     </div>
                 </div>
-
-                <!-- oksana kostiuk -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/Oksana Kostiuk-min.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Оксана Костюк</h5>
-                    </div>
-                </div>
-
-                <!-- masha -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/Mariia Protsenko-min.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Марія Проценко</h5>
-                    </div>
-                </div>
-
-                <!-- daria panasiuk -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/Dariia Panasiuk-min.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Дарія Панасюк</h5>
-                    </div>
-                </div>
-
-                <!-- arina -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/Arina Martyniuk-min.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Аріна Мартинюк</h5>
-                    </div>
-                </div>
-
-                <!-- alia -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/alia.WEBP"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Аля Михалатюк</h5>
-                    </div>
-                </div>
-
-                <!-- v nakoneczna -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/vika_nakoneczna.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Вікторія Наконечна</h5>
-                    </div>
-                </div>
-
-                <!-- a denysiuk -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/Alina_Denysiuk-min.jpg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Аліна Денисюк</h5>
-                    </div>
-                </div>
-
-                <!-- v aitbaeva -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/vika-min.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Вікторія Айтбаєва</h5>
-                    </div>
-                </div>
-                <!-- k konovalova-->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/katia.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Катерина Коновалова</h5>
-                    </div>
-                </div>
-
-                <!-- b petryk -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/bogdana_petryk.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Богдана Петрик</h5>
-                    </div>
-                </div>
-                <!-- k drozdiuk -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/kate_drozdiuk-min.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Катерина Дроздюк</h5>
-                    </div>
-                </div>
-                <!-- v zdamarova -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/veronika_zdaramova-min.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Вероніка Ждамарова</h5>
-                    </div>
-                </div>
-
-                <!-- yuliia romaniuk -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/juliar.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Юлія Романюк</h5>
-                    </div>
-                </div>
-
-                <!-- a shymanska -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/anna_szymanska-min.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Анна Шиманська</h5>
-                    </div>
-                </div>
-
-                <!-- l bielik -->
-                <div class="col-md-3">
-                    <img src="https://dusha-project.com/img/participants/new/lana.jpeg"
-                        class="card-img-top person-image participant-image" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title person-name text-center">Лана Бєлік</h5>
-                    </div>
-                </div>
+            <?php endforeach; ?>
             </div>
         <?php endif; ?>
 
