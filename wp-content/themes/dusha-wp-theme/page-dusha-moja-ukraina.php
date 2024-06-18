@@ -115,7 +115,7 @@
             <section class="splide participants-slider">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <?php  foreach ($participants as $participant) :?>
+                        <?php  foreach (DushaMojaUkraina::getParticipants() as $participant) :?>
                         <li class="splide__slide">
                             <img src="<?php echo esc_url($participant['imageSrc']); ?>" class="card-img-top person-image participant-image" alt="">
                             <div class="card-body">
@@ -128,7 +128,7 @@
             </section>
         <?php else: ?>
             <div class="row">
-            <?php foreach ($participants as $participant) :?>
+            <?php foreach (DushaMojaUkraina::getParticipants() as $participant) :?>
                 <div class="col-md-3">
                     <img src="<?php echo esc_url($participant['imageSrc']); ?>" class="card-img-top person-image participant-image" alt="">
                     <div class="card-body">
