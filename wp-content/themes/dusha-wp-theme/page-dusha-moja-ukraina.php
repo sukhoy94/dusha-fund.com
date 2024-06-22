@@ -115,4 +115,5 @@
     </div>
 </section>
 <!-- participants end -->
+
 <?php get_footer(); ?>

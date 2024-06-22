@@ -5,7 +5,7 @@ Tags: multilingual, translate, translation, language, localization
 Requires at least: 6.2
 Tested up to: 6.5
 Requires PHP: 7.0
-Stable tag: 3.6.1
+Stable tag: 3.6.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -104,6 +104,21 @@ Wherever third party code has been used, credit has been given in the code’s c
 4. The Edit Post screen with the Languages metabox
 
 == Changelog ==
+
+= 3.6.3 (2024-06-18) =
+
+* Pro: Fix locale fallback for translations loaded just in time (requires WP 6.6)
+* Allow to pass an array as context to icl_register_string() #1497
+* Fix admin bar search menu in WP 6.6 #1496
+* Fix a regression in the usage of the filter pll_flag #1489
+
+= 3.6.2 (2024-06-03) =
+
+* Pro: Fix XLIFF files not correctly imported when exported from older version than 3.6
+* Pro: Fix translated categories not assigned to translated post when using machine translation
+* Pro: Fix 'lang' param not applied for secondary queries during a REST request
+* Pro: Fix newlines for content edited in classic editor and translated with DeepL
+* Pro: Fix a conflict with the Stream plugin on multisite
 
 = 3.6.1 (2024-04-09) =
 
