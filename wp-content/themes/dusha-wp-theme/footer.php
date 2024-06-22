@@ -36,7 +36,7 @@
         </li>
     <?php endforeach;?>
 </ul>
-<footer class="py-3 my-4">
+<footer>
     <ul class="social-links-list w-100 justify-content-center list-unstyled mb-0">
         <?php foreach($socialLinksCollection as $socialLink): ?>
             <li class="ms-3">
