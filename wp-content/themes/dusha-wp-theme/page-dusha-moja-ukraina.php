@@ -1,22 +1,8 @@
 <?php /* Template Name: Dusha moja - Ukraina project */ ?>
 <?php get_header(); ?>
 <?php require_once("backend/DushaMojaUkraina.php"); ?>
-<!-- hero start -->
-<section class="bg-hero d-flex align-items-center" id="home">
-    <div class="container hero-text-container">
-        <div class="row vh-md-100">
-            <div class="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
-                <h1 class="heading-black text-capitalize">
-                    <?php echo pll__('Hero tytuł');?>
-                </h1>
-                <p class="lead py-3">
-                    <?php echo pll__('Hero subtytul');?>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- hero end -->
+<?php require_once(get_template_directory(  ) . "/inc/dusha-moja-ukraina/hero.php"); ?>
+
 
 <!-- mission start -->
 <section class="section-angle top-left bottom-left pb-5 pt-5 mission-wrapper" id="charity">

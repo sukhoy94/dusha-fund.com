@@ -11,3 +11,5 @@ pll_register_string('price_label', 'Price label', 'Theme Strings');
 pll_register_string('dusha_hero_title', 'Hero tytuł', 'Theme Strings');
 pll_register_string('dusha_hero_subtitle', 'Hero subtytul', 'Theme Strings');
 
+// mission
+pll_register_string('dusha_mission_title', 'Mission', 'Theme Strings');
