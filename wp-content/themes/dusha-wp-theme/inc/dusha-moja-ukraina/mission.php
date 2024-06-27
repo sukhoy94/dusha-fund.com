@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-9 mx-auto text-center">
                 <h2 class="heading-black color-pink">
-                    Місія
+                    <?php echo pll__("Mission Title");?>
                 </h2>
                 <p class="mission-description">
 
