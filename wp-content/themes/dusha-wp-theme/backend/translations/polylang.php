@@ -13,3 +13,4 @@ pll_register_string('dusha_hero_subtitle', 'Hero subtytul', 'Theme Strings');
 
 // mission
 pll_register_string('dusha_mission_title', 'Mission Title', 'Theme Strings');
+pll_register_string('dusha_mission_subtitle', 'Mission Subtitle', 'Theme Strings');
