@@ -30,13 +30,12 @@
                 <div class="row">
                     <div class="mission-slogan col-lg-3 col-md-4 d-flex align-self-center">
                         <h4 class="color-pink mb-0">
-                            Об’єднуємо
+                            <?php echo pll__("Mission Slogan1 Title");?>
                         </h4>
                     </div>
                     <div class="mission-slogan-content col-md-8 col-lg-9 d-flex">
                         <p class="mb-0">
-                            ініціативну молодь задля спільної мети, даючи кожному простір на розвиток своїх здібностей
-                            та талантів.
+                            <?php echo pll__("Mission SloganDescription1"); ?>
                         </p>
                     </div>
                 </div>
@@ -45,13 +44,13 @@
                 <div class="row">
                     <div class="mission-slogan col-lg-3 col-md-4 d-flex align-self-center">
                         <h4 class="color-pink mb-0">
-                            Підтримуємо
+                            <?php echo pll__("Mission Slogan2 Title");?>
                         </h4>
                     </div>
                     <div class="mission-slogan-content col-md-8 col-lg-9 d-flex">
                         <p class="mb-0">
-                            культуру, плекаючи всім відоме, додаючи до нього своє та відкриваючи нове.
-                        </p>
+                        <?php echo pll__("Mission SloganDescription2"); ?>
+                    </p>
                     </div>
                 </div>
             </div>
@@ -59,13 +58,12 @@
                 <div class="row">
                     <div class="mission-slogan col-lg-3 col-md-4 d-flex align-self-center">
                         <h4 class="color-pink mb-0">
-                            Допомагаємо
+                            <?php echo pll__("Mission Slogan3 Title");?>
                         </h4>
                     </div>
                     <div class="mission-slogan-content col-md-8 col-lg-9 d-flex">
                         <p class="mb-0">
-                            постраждалим від війни в Україні. Нагадуємо світові про війну, що триває до сьогодні, і
-                            людей, що досі потребують нашої допомоги.
+                            <?php echo pll__("Mission SloganDescription3"); ?>
                         </p>
                     </div>
                 </div>
