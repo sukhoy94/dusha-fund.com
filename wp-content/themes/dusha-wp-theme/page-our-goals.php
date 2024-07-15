@@ -11,13 +11,9 @@ global $post;
         <h1 class="color-primary page-content-title mt-5"><?=$post->post_title?></h1>
         <?=$post->post_content;?>
 
-        <div class="text-center">
-            <a target="_blank" class="btn btn-animated-1" href="https://dusha-project.com/docs/statut_web.pdf">
-                <span>Pobierz statut fundacji</span>
-            </a>
-        </div>
     </div><!-- #main -->
 
 <?php
+wp_reset_postdata();
 get_sidebar();
 get_footer();
