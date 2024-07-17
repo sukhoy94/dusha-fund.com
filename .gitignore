@@ -32,3 +32,5 @@ wp-config.php
 #/wp-content/themes
 
 node_modules
+
+wp-content/themes/.DS_Store
