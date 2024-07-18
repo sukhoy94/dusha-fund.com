@@ -6,7 +6,7 @@ Since its establishment in February 2024, we have been actively engaged in suppo
 Our goal is not only to promote art but also to propagate values such as diversity, open dialogue between cultures, and the development of local and regional communities.
 
 ## Tech stack
-- wordpress + php8.1
+- wordpress 6.6 + php8.1
 - mysql
 - webpack
 - sass
