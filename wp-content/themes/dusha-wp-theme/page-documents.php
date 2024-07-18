@@ -15,51 +15,54 @@
     </div>
 
     <div class="row d-flex">
-        <div class="card text-center col-md-3">
-            <a 
-                href="<?php echo get_template_directory_uri() . '/assets/docs/statut_web.pdf'?>"
-                target="_blank"
-            >
-                <img 
-                    src="<?php echo get_template_directory_uri() . '/assets/images/documents/status.png'; ?>"
-                    class="card-img-top" 
-                    alt="Statut fundacji Dusha"
-                >
-            </a>
-            
-            <div class="card-body">
-                <h5 class="card-title">Statut fundacji</h5>
-                <p class="card-text">Statut fundacji DUSHA w jęz. polskim</p>
+        <div class="text-center col-md-3">
+            <div class="card document-card">
                 <a 
-                    href="<?php echo get_template_directory_uri() . '/assets/docs/statut_web.pdf'?>" 
-                    class="btn btn-primary bg-primary no-border"
+                    href="<?php echo get_template_directory_uri() . '/assets/docs/statut_web.pdf'?>"
                     target="_blank"
-                >Pobierz dokument</a>
+                >
+                    <img 
+                        src="<?php echo get_template_directory_uri() . '/assets/images/documents/status.png'; ?>"
+                        class="card-img-top" 
+                        alt="Statut fundacji Dusha"
+                    >
+                </a>
+                
+                <div class="card-body">
+                    <h5 class="card-title">Statut fundacji</h5>
+                    <p class="card-text">Statut fundacji DUSHA w jęz. polskim</p>
+                    <a 
+                        href="<?php echo get_template_directory_uri() . '/assets/docs/statut_web.pdf'?>" 
+                        class="btn btn-primary bg-primary no-border"
+                        target="_blank"
+                    >Pobierz dokument</a>
+                </div>
+            </div>            
+        </div>
+        <div class="text-center col-md-3">
+            <div class="card document-card">
+                <a 
+                    href="<?php echo get_template_directory_uri() . '/assets/docs/standardy_ochrony_maloletnich.pdf'; ?>"
+                    target="_blank"
+                >
+                    <img 
+                        src="<?php echo get_template_directory_uri() . '/assets/images/documents/standardy_ochrony_maloletnich.png'; ?>"
+                        class="card-img-top" 
+                        alt="Statut fundacji Dusha"
+                    >
+                </a>
+                
+                <div class="card-body">
+                    <h5 class="card-title">Standardy ochrony małoletnich</h5>
+                    <p class="card-text">Standardy ochrony małoletnich w fundacji Dusha</p>
+                    <a 
+                        href="<?php echo get_template_directory_uri() . '/assets/docs/standardy_ochrony_maloletnich.pdf'?>" 
+                        class="btn btn-primary bg-primary no-border"
+                        target="_blank"
+                    >Pobierz dokument</a>
+                </div>
             </div>
         </div>
-
-        <div class="card text-center col-md-3">
-        <a 
-            href="<?php echo get_template_directory_uri() . '/assets/docs/standardy_ochrony_maloletnich.pdf'; ?>"
-            target="_blank"
-        >
-            <img 
-                src="<?php echo get_template_directory_uri() . '/assets/images/documents/standardy_ochrony_maloletnich.png'; ?>"
-                class="card-img-top" 
-                alt="Statut fundacji Dusha"
-            >
-        </a>
-        
-        <div class="card-body">
-            <h5 class="card-title">Standardy ochrony małoletnich</h5>
-            <p class="card-text">Standardy ochrony małoletnich w fundacji Dusha</p>
-            <a 
-                href="<?php echo get_template_directory_uri() . '/assets/docs/standardy_ochrony_maloletnich.pdf'?>" 
-                class="btn btn-primary bg-primary no-border"
-                target="_blank"
-            >Pobierz dokument</a>
-        </div>
-    </div>
     </div>
 </div>
 
