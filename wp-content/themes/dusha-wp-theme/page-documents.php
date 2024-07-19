@@ -9,13 +9,13 @@
 
 <div class="container">
     <div>
-        <h1 class="color-white">
+        <h1 class="color-white documents-page-title">
             <?php the_title(); ?>
         </h1>
     </div>
 
-    <div class="row d-flex">
-        <div class="text-center col-md-3">
+    <div class="row d-flex mt-5">
+        <div class="text-center col-md-4">
             <div class="card document-card">
                 <a 
                     href="<?php echo get_template_directory_uri() . '/assets/docs/statut_web.pdf'?>"
@@ -30,7 +30,6 @@
                 
                 <div class="card-body">
                     <h5 class="card-title">Statut fundacji</h5>
-                    <p class="card-text">Statut fundacji DUSHA w jęz. polskim</p>
                     <a 
                         href="<?php echo get_template_directory_uri() . '/assets/docs/statut_web.pdf'?>" 
                         class="btn btn-primary bg-primary no-border"
@@ -39,7 +38,7 @@
                 </div>
             </div>            
         </div>
-        <div class="text-center col-md-3">
+        <div class="text-center col-md-4">
             <div class="card document-card">
                 <a 
                     href="<?php echo get_template_directory_uri() . '/assets/docs/standardy_ochrony_maloletnich.pdf'; ?>"
@@ -54,7 +53,6 @@
                 
                 <div class="card-body">
                     <h5 class="card-title">Standardy ochrony małoletnich</h5>
-                    <p class="card-text">Standardy ochrony małoletnich w fundacji Dusha</p>
                     <a 
                         href="<?php echo get_template_directory_uri() . '/assets/docs/standardy_ochrony_maloletnich.pdf'?>" 
                         class="btn btn-primary bg-primary no-border"
