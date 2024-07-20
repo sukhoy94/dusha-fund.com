@@ -12,5 +12,4 @@ Our goal is not only to promote art but also to propagate values such as diversi
 - sass
 
 ## Multilingual 
-
 For translations we are using PolyLang free version
