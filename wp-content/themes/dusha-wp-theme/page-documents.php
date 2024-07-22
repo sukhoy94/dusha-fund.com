@@ -21,8 +21,8 @@
                     href="<?php echo get_template_directory_uri() . '/assets/docs/statut_web.pdf'?>"
                     target="_blank"
                 >
-                    <img 
-                        src="<?php echo get_template_directory_uri() . '/assets/images/documents/status.png'; ?>"
+                    <img
+                        src="<?php echo get_template_directory_uri() . '/assets/images/documents/statut_img.svg'; ?>"
                         class="card-img-top" 
                         alt="Statut fundacji Dusha"
                     >
@@ -45,7 +45,7 @@
                     target="_blank"
                 >
                     <img 
-                        src="<?php echo get_template_directory_uri() . '/assets/images/documents/standardy_ochrony_maloletnich.png'; ?>"
+                        src="<?php echo get_template_directory_uri() . '/assets/images/documents/standardy_ochrony_maloletnich.svg'; ?>"
                         class="card-img-top" 
                         alt="Statut fundacji Dusha"
                     >
