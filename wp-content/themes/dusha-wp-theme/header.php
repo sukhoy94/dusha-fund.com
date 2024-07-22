@@ -58,7 +58,9 @@
                     ) );
                     ?>
 
-                    <a class="btn bg-primary color-white donate-btn" href="<?php echo get_permalink(132);?>"> Donate <i class="fa-solid fa-heart"></i> </a>
+                    <a class="btn bg-primary color-white donate-btn" href="<?php echo get_permalink(132);?>"> 
+                        <?php echo pll__('Donate') ;?> <i class="fa-solid fa-heart"></i> 
+                    </a>
                 </div>
 
 
