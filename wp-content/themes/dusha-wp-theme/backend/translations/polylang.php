@@ -20,3 +20,6 @@ pll_register_string('dusha_mission_slogan3_title', 'Mission Slogan3 Title', 'The
 pll_register_string('dusha_mission_slogan1_desc', 'Mission SloganDescription1', 'Theme Strings');
 pll_register_string('dusha_mission_slogan2_desc', 'Mission SloganDescription2', 'Theme Strings');
 pll_register_string('dusha_mission_slogan3_desc', 'Mission SloganDescription3', 'Theme Strings');
+
+// donate button 
+pll_register_string('dusha_donate_label', 'Donate', 'Theme Strings');
