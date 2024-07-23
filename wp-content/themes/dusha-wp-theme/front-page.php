@@ -5,8 +5,10 @@
             'category_name' => 'front-page-hero-section',
             'posts_per_page' => 1,
         ]);
-
-        $post = $query->posts[0];
+        
+        if (!empty($query->posts)) {
+            $post = $query->posts[0];
+        }
     ?>
 <section class="front-page-hero d-flex align-items-center" id="home">
     <div class="container hero-text-container">
