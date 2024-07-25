@@ -155,8 +155,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require_once "backend/navigation.php";
 require_once "backend/translations/polylang.php";
 
-add_filter( 'template_include', 'portfolio_page_template', 99 );
-function portfolio_page_template( $template ) {
+add_filter( 'template_include', 'modify_page_template', 99 );
+function modify_page_template( $template ) {
     // custom template for goals page
     if (is_page('our-goals') || is_page('nasze-cele') ) {
         $new_template = locate_template( array( 'page-our-goals.php' ) );
