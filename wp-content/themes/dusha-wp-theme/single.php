@@ -1,40 +1,21 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Dusha_WP_theme
- */
+<?php get_header();?>
+<?php global $post;?>
 
-get_header();
-?>
+<div class="container color-white blog-post pb-9rem">
+	<article>
+		<h1>
+			<?php echo $post->post_title;?>
+		</h1>
 
-	<main id="primary" class="site-main">
+		<time datetime="<?php echo $post->post_date; ?>">
+			Opublikowano <?php echo $post->post_date; ?>		
+		</time>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+		<div class="post-content">
+			<?php echo $post->post_content;?>		
+		</div>
+	</article>
+</div>
 
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'dusha-wp-theme' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'dusha-wp-theme' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php wp_reset_postdata();?>
+<?php get_footer();?>
