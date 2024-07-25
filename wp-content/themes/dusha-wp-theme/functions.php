@@ -188,3 +188,10 @@ function portfolio_page_template( $template ) {
 }
 
 
+
+add_filter( 'previous_posts_link_attributes', 'pagination_posts_link_attributes_filter' );
+add_filter( 'next_posts_link_attributes', 'pagination_posts_link_attributes_filter' );
+
+function pagination_posts_link_attributes_filter( $attributes ){
+	return 'class="page-link"';
+}
