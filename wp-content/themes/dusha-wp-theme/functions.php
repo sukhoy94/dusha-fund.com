@@ -173,6 +173,14 @@ function portfolio_page_template( $template ) {
         }
     }
 
+	// template for blog category
+	if (is_category('blog-uk') || is_category('blog')) {
+        $new_template = locate_template( array( 'category-blog.php' ) );
+        if ( '' != $new_template ) {
+            return $new_template ;
+        }
+    }
+
     // custom template for events
     if (is_singular()) {
         $postCategories = array_column(get_the_category(), 'slug');
