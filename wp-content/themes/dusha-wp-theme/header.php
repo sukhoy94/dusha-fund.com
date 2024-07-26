@@ -73,5 +73,8 @@
                     }
                 ?>
             </ul>
+
+
+            <?php get_search_form(); ?>
         </header><!-- #masthead -->
     </div>
