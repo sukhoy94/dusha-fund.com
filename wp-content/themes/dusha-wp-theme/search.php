@@ -1,53 +1,52 @@
-<?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package Dusha_WP_theme
- */
+<?php get_header();?>
 
-get_header();
-?>
+<div class="container color-white posts-wrapper">
+    <h1 class="text-center mt-5">
+        Wyniki wyszukiwania: 
+    </h1>
 
-	<main id="primary" class="site-main">
+    <article class="pt-2 text-center">
+        <?php echo category_description(); ?>
+    </article>
 
-		<?php if ( have_posts() ) : ?>
+    <div class="row posts-list mt-5">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <div class="col-md-12 post-item">
+            <h2>
+                <a href="<?php the_permalink();?>">
+                    <?php the_title();?>
+                </a>
+            </h2>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'dusha-wp-theme' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+            <article>
+                <?php the_excerpt();?>
+            </article>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+            <a 
+                class="btn read-more"
+                href="<?php the_permalink();?>"
+            >
+                Czytaj dalej
+            </a>
+            </div>
+        <?php endwhile;?> 
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item previous-posts-link">
+                    <?php previous_posts_link( 'Nowsze wpisy' ); ?>
+                </li>
+                
+                <li class="page-item next-posts-link">
+                    <?php next_posts_link('Starsze wpisy'); ?>
+                </li>
+            </ul>
+        </nav>
+        
+        <?php else : ?>
+            <p><?php esc_html_e( 'Uszanowanko, nic nie znaleziono' ); ?></p>
+        <?php endif; ?>     
+    </div>
+</div>
 
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();?>
