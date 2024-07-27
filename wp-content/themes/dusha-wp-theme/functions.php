@@ -203,3 +203,10 @@ add_filter( 'next_posts_link_attributes', 'pagination_posts_link_attributes_filt
 function pagination_posts_link_attributes_filter( $attributes ){
 	return 'class="page-link"';
 }
+
+
+function empty_excerpt_more(string $more) {
+	return '';
+}
+
+add_filter( 'excerpt_more', 'empty_excerpt_more' );

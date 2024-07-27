@@ -23,3 +23,6 @@ pll_register_string('dusha_mission_slogan3_desc', 'Mission SloganDescription3', 
 
 // donate button 
 pll_register_string('dusha_donate_label', 'Donate', 'Theme Strings');
+
+// search
+
