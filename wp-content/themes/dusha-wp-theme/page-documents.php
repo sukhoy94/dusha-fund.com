@@ -61,6 +61,30 @@
                 </div>
             </div>
         </div>
+
+        <div class="text-center col-md-4 mb-3">
+            <div class="card document-card">
+                <a 
+                    href="<?php echo get_template_directory_uri() . '/assets/docs/standardy_ochrony_maloletnich_skrocona.pdf'?>"
+                    target="_blank"
+                >
+                <img 
+                        src="<?php echo get_template_directory_uri() . '/assets/images/documents/standardy_ochrony_maloletnich.svg'; ?>"
+                        class="card-img-top" 
+                        alt="Standardy ochrony maloletnich - wersja skrocona dla dzieci"
+                    >
+                </a>
+                
+                <div class="card-body">
+                    <h5 class="card-title">Standardy ochrony małoletnich - wersja dla dzieci</h5>
+                    <a 
+                        href="<?php echo get_template_directory_uri() . '/assets/docs/standardy_ochrony_maloletnich_skrocona.pdf'?>" 
+                        class="btn btn-primary bg-primary no-border"
+                        target="_blank"
+                    >Pobierz dokument</a>
+                </div>
+            </div>            
+        </div>
     </div>
 </div>
 
