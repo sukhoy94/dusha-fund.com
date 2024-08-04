@@ -210,3 +210,7 @@ function empty_excerpt_more(string $more) {
 }
 
 add_filter( 'excerpt_more', 'empty_excerpt_more' );
+
+add_filter('render_block_core/shortcode', function(string $block_content): string {
+	return do_shortcode($block_content);
+	});
