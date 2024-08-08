@@ -17,7 +17,7 @@
 
 <ul class="social-links-list">
     <?php foreach($socialLinksCollection as $socialLink): ?>
-        <li class="ms-3"> e
+        <li class="ms-3">
             <a class="social-link" target="_blank" href="<?=$socialLink['href'];?>">
                 <i class="fa-brands <?=$socialLink['css-class']?>"></i>
             </a>
